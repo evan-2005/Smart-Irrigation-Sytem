@@ -51,8 +51,8 @@ BlynkTimer timer;
 
 // ===================== WIFI & ESP8266 CONFIG =====================
 // WiFi credentials (used by ESP8266 to connect to router)
-char ssid[] = "SunwayEdu";
-char pass[] = "";
+char ssid[] = "wifiname";
+char pass[] = "wifipassword";
 
 // Software UART connection to ESP8266 shield
 // RX, TX pins must match Arduino wiring
