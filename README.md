@@ -135,22 +135,75 @@ v
 2. Update WiFi credentials in the code:
    ```cpp
    char ssid[] = "Your_SSID";
-   char pass[] = "Your_Password";'''
+   char pass[] = "Your_Password";
 3. Update Blynk Auth Token:
+   ```cpp
+   #define BLYNK_AUTH_TOKEN "Your_Blynk_Token"
 
-  #define BLYNK_AUTH_TOKEN "Your_Blynk_Token"
+4. Upload Arduino offline code to Arduino.
 
+5. Upload ESP8266 Blynk code to Arduino (via shield).
 
-Upload Arduino offline code to Arduino.
+6. Open Blynk mobile app, configure virtual pins:
 
-Upload ESP8266 Blynk code to Arduino (via shield).
+- V2 → Pump Switch
 
-Open Blynk mobile app, configure virtual pins:
+- V5 → Soil Moisture
 
-V2 → Pump Switch
+- V6 → Light Intensity
 
-V5 → Soil Moisture
+7. Power the system, monitor LCD, and verify Blynk cloud readings.
 
-V6 → Light Intensity
+---
 
-Power the system, monitor LCD, and verify Blynk cloud readings.
+### Testing & Results
+
+- Sensor readings are checked using Serial Monitor and LCD output.
+
+- Pump responds to:
+
+   -  Soil moisture thresholds offline
+
+   - Manual override via Blynk online
+
+- Alerts via buzzer and LED for abnormal soil conditions.
+
+- Data uploaded to Blynk app every 1 second.
+
+**Observations:**
+
+- Offline LCD ensures responsible IoT design: users can monitor irrigation even if WiFi fails.
+
+- Online cloud control enables remote monitoring, data logging, and manual override.
+
+---
+
+### Future Work
+
+- Unified Online-Offline Mode: Automatic sync between offline Arduino and Blynk cloud.
+
+- Additional Sensors: Temperature-based irrigation (DHT), rain detection, water-level sensors.
+
+- Multi-Zone Irrigation: Support multiple pumps and relays.
+
+- Adaptive Logic: Use historical data for dynamic irrigation thresholds.
+
+- Enhanced Dashboard: Include analytics and alerts.
+
+---
+
+### References
+
+{https://docs.blynk.io/en/}()
+
+Arduino LiquidCrystal I2C Library
+
+DHT Sensor Library
+
+ESP8266 AT Command Guide
+
+Notes
+
+This project demonstrates responsible IoT engineering, balancing cloud convenience with local autonomy.
+
+Hybrid online-offline architecture reduces downtime and supports future scaling.
