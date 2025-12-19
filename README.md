@@ -1,4 +1,4 @@
-# Smart Irrigation System
+# Smart Irrigation System (AquaSense)
 
 ## Project Overview
 
@@ -12,4 +12,3 @@ Key features:
 - Remote monitoring and control using Blynk cloud.
 - Token-based authentication ensuring secure cloud interaction.
 - Buzzer and LED alerts for abnormal conditions (e.g., dry soil).
-
