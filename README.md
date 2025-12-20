@@ -283,9 +283,7 @@ The deployed prototype uses a **stacked Arduino Uno and ESP8266 WiFi shield conf
 ### Physical Prototype Image
 
 <p align="center">
-  <img src="image-4.png"
-       alt="System Image"
-       style="transform: rotate(-90deg); width: 50%;">
+  <img src="physical iot copy.png" alt="Physical IoT Setup" width="70%">
 </p>
 
 
