@@ -296,7 +296,11 @@ The deployed prototype uses a **stacked Arduino Uno and ESP8266 WiFi shield conf
 ## Tinkercad Simulation Environment
 
 A Tinkercad simulation was developed to validate system logic prior to physical deployment.
-![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+*Figure: Smart Irrigation System prototype with sensors, relay, LCD, and ESP8266 WiFi shield on Tinkercad.*
+
 ### Simulation Scope
 - Sensor value variation testing (dry, wet, no-soil conditions).
 - Relay activation logic verification.
@@ -342,7 +346,7 @@ ensures the system is:
 
 ### References
 
-{Blynk Inc. (2024). Blynk Documentation: IoT Platform Overview and Virtual Pin API.
+Blynk Inc. (2024). Blynk Documentation: IoT Platform Overview and Virtual Pin API.
 Available at: https://docs.blynk.io/
 
 Arduino. (2024). Arduino Uno Rev3 – Technical Specifications.
@@ -359,6 +363,7 @@ Available at: https://www.espressif.com/en/products/socs/esp8266
 
 IEEE. (2022). IEEE 2413–2019: Standard for an Architectural Framework for the Internet of Things (IoT).
 IEEE Standards Association.
+
 ---
 
 ### Notes
