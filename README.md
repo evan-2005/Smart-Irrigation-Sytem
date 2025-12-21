@@ -346,7 +346,8 @@ ensures the system is:
 A recorded presentation and system demonstration have been prepared in accordance with the NET3054 presentation guidelines. The video explains the system motivation, architecture, implementation details, networking and security mechanisms, followed by a functional demonstration of both offline and online operation.
 
 YouTube Video Link:
-🔗 [\[CLICK FOR YOUTUBE VIDEO\]](https://youtu.be/VLq-OanZU4c?si=YhPZSO9nAkhhPZBs)
+
+🔗 [\[CLICK HERE FOR YOUTUBE VIDEO\]](https://youtu.be/VLq-OanZU4c?si=YhPZSO9nAkhhPZBs)
 
 **Video Contents**
 
