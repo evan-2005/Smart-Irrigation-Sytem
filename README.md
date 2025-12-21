@@ -341,7 +341,32 @@ ensures the system is:
 - Enhanced Dashboard: Include analytics and alerts.
 
 ---
+### Project Presentation & Demonstration Video
 
+A recorded presentation and system demonstration have been prepared in accordance with the NET3054 presentation guidelines. The video explains the system motivation, architecture, implementation details, networking and security mechanisms, followed by a functional demonstration of both offline and online operation.
+
+YouTube Video Link:
+🔗 [INSERT YOUTUBE VIDEO LINK HERE]
+
+**Video Contents**
+
+- Problem background and motivation
+
+- Hybrid online–offline system architecture
+
+- Arduino-based sensing and automation logic
+
+- ESP8266 networking and Blynk cloud integration
+
+- Security overview (token-based authentication, TLS)
+
+- Live/recorded system demonstration
+
+- Results, observations, and future improvements
+
+This video complements the repository documentation and serves as the official project presentation submission.
+
+---
 ### References
 
 Blynk Inc. (2024). Blynk Documentation: IoT Platform Overview and Virtual Pin API.
