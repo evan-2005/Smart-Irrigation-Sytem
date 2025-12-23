@@ -382,7 +382,7 @@ A recorded presentation and system demonstration have been prepared in accordanc
 
 YouTube Video Link:
 
-🔗 [\[CLICK HERE FOR YOUTUBE VIDEO\]](https://youtu.be/VLq-OanZU4c?si=YhPZSO9nAkhhPZBs)
+🔗 [\[CLICK HERE FOR YOUTUBE VIDEO\]](https://youtu.be/fWF4YsvNTVQ?si=2eYJwKh0bkKVogil)
 
 **Video Contents**
 
