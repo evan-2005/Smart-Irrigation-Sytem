@@ -132,16 +132,51 @@ Security is delegated to the cloud layer to reduce cryptographic and memory over
 - **Arduino ↔ ESP8266:** UART (SoftwareSerial), 9600 baud  
 - **ESP8266 ↔ Cloud:** TCP/IP over WiFi  
 - **Application Protocol:** Blynk virtual pin abstraction  
+### Blynk Data Streams Configuration
+
+Blynk **Data Streams** are used to define the logical channels through which sensor data and control commands are exchanged between the physical device and the cloud application. Each datastream is mapped to a **Virtual Pin**, allowing standardized, secure, and scalable communication.
+
+#### Configured Data Streams
+
+| Virtual Pin | Data Type | Direction | Description |
+|------------|----------|-----------|-------------|
+| V2 | Integer (0/1) | Cloud → Device | Manual pump control (ON/OFF) |
+| V5 | Integer | Device → Cloud | Soil moisture sensor reading |
+| V6 | Integer | Device → Cloud | Light intensity (LDR) reading |
+
+#### Data Stream Characteristics
+- **Update Rate:** 1 second (configured via `BlynkTimer`)
+- **Data Source:** Arduino sensor readings forwarded through ESP8266
+- **Control Priority:**  
+  - Cloud commands are accepted when online  
+  - Offline Arduino logic maintains fail-safe control
+
+#### Design Rationale
+- Virtual pins decouple hardware logic from cloud UI design.
+- Enables future scalability (additional sensors, zones, dashboards).
+- Simplifies debugging and testing during development.
+
+This datastream-based design ensures clean separation between **device logic**, **network transport**, and **application visualization**.
+
+![alt text](image-7.png)
+
+Figure: Blynk Data Stream Dashboard Real-time visualization of soil moisture and light intensity readings transmitted from the Arduino-based irrigation system via ESP8266 to the Blynk cloud, with virtual-pin–mapped datastreams enabling remote monitoring and control.*
+
 
 **Data Flow**
 - Sensors → Arduino → ESP8266 → Blynk Cloud → User  
 - User → Blynk Cloud → ESP8266 → Arduino → Relay  
+
+Sensor data is encapsulated into Blynk datastream updates using virtual pins, enabling structured and scalable application-layer communication between the device and cloud.
 
 ---
 
 ## 6. Security Implementation
 
 1. Token-based device authentication (Blynk Auth Token)
+
+   -  Access to all Blynk datastreams is restricted via token-based authentication, ensuring that only authorized devices and users can read or modify sensor data and control commands.
+
 2. TLS-encrypted cloud communication
 3. Fail-safe offline automation during network outages
 
